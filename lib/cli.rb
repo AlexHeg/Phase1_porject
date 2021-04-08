@@ -1,6 +1,6 @@
 class CLI 
    def start
-    puts "Welcome to the collection of 3D MMORPG fantasy games played on your browser!
+    puts "Welcome to the collection of MMORPG games to be played !
     Whats your name?" 
     API.get_data
     input = user_input
@@ -19,10 +19,10 @@ class CLI
 
    def menu
     selection = user_input
-        if selection == "yes"
+        if selection.downcase == "yes"
          print_games
-            menu
-        elsif selection == "exit"
+            #menu
+        elsif selection.downcase == "exit"
             goodbye
         else 
             invalide
@@ -41,13 +41,13 @@ class CLI
     def print_games
         
         Games.all.each.with_index(1) do |game, index|
-        puts "#{index}, #{game.title}"
+        puts "#{index}. #{game.title}"
         end
         select_game
     end
     
     def select_game
-        puts "Please enter the name of the game you like to learn more about. Remeber the names are case sensative!"
+        puts "Please enter the name of the game you like to learn more about."
         selection = user_input
         if game = Games.find_by_selection(selection)
             game = Games.find_by_selection(selection)
@@ -55,6 +55,7 @@ class CLI
             game = selection
         end
         game_detailes(game)
+        menu
     end
 
     def game_detailes(game)

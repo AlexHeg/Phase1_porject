@@ -19,7 +19,7 @@ class Games
 
     def self.find_by_selection(game_title)
         self.all.detect do |game|
-            game.title == game_title
+            game.title.downcase == game_title.downcase
         end
     end
 
