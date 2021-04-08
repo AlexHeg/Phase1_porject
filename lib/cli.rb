@@ -1,6 +1,6 @@
 class CLI 
    def start
-    puts "Welcome to the collection of MMORPG games to be played !
+    puts "Welcome to the collection of MMORPG games to be played!
     Whats your name?" 
     API.get_data
     input = user_input
@@ -25,7 +25,7 @@ class CLI
         elsif selection.downcase == "exit"
             goodbye
         else 
-            invalide
+            invalid
             menu
         end
     end
@@ -34,8 +34,8 @@ class CLI
         puts "Thanks for stopping by! If you found a game have fun playing!"
     end
 
-    def invalide
-        puts "Sorry thats not recognized... Try again"
+    def invalid
+        puts "Sorry thats not recognized... Type yes to see the list of games or exit to exit."
     end
 
     def print_games
@@ -44,6 +44,7 @@ class CLI
         puts "#{index}. #{game.title}"
         end
         select_game
+        
     end
     
     def select_game
@@ -55,7 +56,7 @@ class CLI
             game = selection
         end
         game_detailes(game)
-        menu
+    
     end
 
     def game_detailes(game)
@@ -64,13 +65,16 @@ class CLI
         elsif game.class == Games
                 puts "~~~~~~~~~~~~~~~~~"
                 puts "Title: #{game.title}"
+                puts "Platform: #{game.platform}"
                 puts "Publisher: #{game.publisher}"
+                puts "Developer: #{game.developer}"
                 puts "Description: #{game.short_description}"
                 puts "Release Date: #{game.release_date}"
                 puts "~~~~~~~~~~~~~~~~~"
                 puts "Enter yes to see more games or exit to exit."
+                menu
         else
-            invalide
+            invalid
         end
     end
 end

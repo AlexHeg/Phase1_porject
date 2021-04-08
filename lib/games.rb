@@ -1,5 +1,5 @@
 class Games 
-    attr_accessor :title, :short_description, :release_date, :publisher
+    attr_accessor :title, :short_description, :release_date, :publisher, :platform, :developer
     @@all = []
     
     def initialize(game_hash)
