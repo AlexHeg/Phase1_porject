@@ -1,7 +1,6 @@
 class CLI 
-   def start
-    puts "Welcome to the collection of MMORPG games to be played!
-    Whats your name?".colorize(:cyan)
+    def start
+    puts "Welcome to the collection of MMORPG games to be played! Whats your name?".colorize(:cyan)
     API.get_data
     input = user_input
     greet(input)
