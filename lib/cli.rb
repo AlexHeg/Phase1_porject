@@ -1,6 +1,6 @@
-class CLI 
+class CLI
     def start
-    puts "Welcome to the collection of MMORPG games to be played! Whats your name?".colorize(:cyan)
+    puts "Welcome! What is your name?".colorize(:cyan)
     API.get_data
     input = user_input
     greet(input)
@@ -12,7 +12,7 @@ class CLI
    end
 
    def greet(name)
-    puts "Greetings #{name}! Ready to find your new favorite game? Enter yes to see the list or enter exit to exit.".colorize(:cyan)
+    puts "Greetings #{name}! Ready to find your new favorite MMORPG game? Enter yes to see the list or enter exit to exit.".colorize(:cyan)
     menu
    end
 
