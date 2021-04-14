@@ -1,7 +1,6 @@
 class CLI
     def start
-    #puts "Welcome! What is your name?".colorize(:cyan)
-    system "Welcome! What is your name?"
+    puts "Welcome! What is your name?".colorize(:cyan)
     API.get_data
     input = user_input
     greet(input)
