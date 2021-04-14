@@ -67,6 +67,8 @@ class CLI
                 puts "Developer: #{game.developer}".colorize(:light_green)
                 puts "Description: #{game.short_description}".colorize(:light_green)
                 puts "Release Date: #{game.release_date}".colorize(:light_green)
+                puts "Thumbnail Link: #{game.thumbnail}".colorize(:light_green)
+                puts "Game URL: #{game.game_url}".colorize(:light_green)
                 puts "~~~~~~~~~~~~~~~~~".colorize(:light_green)
                 puts "Enter yes to see more games or exit to exit.".colorize(:cyan)
         else
