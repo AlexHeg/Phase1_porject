@@ -4,9 +4,7 @@ class CLI
     API.get_data
     input = user_input
     greet(input)
-   end
-
-
+    end
    def user_input
     gets.strip
    end

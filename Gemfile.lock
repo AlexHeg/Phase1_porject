@@ -25,7 +25,6 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    tts (0.8.2)
     tty-color (0.6.0)
     tty-cursor (0.7.1)
     tty-prompt (0.23.0)
@@ -50,7 +49,6 @@ DEPENDENCIES
   pry
   require_all
   rest-client
-  tts
   tty-prompt
 
 BUNDLED WITH
