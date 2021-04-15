@@ -54,7 +54,7 @@ class CLI
             game = selection
         end
         game_detailes(game)
-        menu
+        #menu
     end
 
     def game_detailes(game)
@@ -72,6 +72,7 @@ class CLI
                 puts "Game URL: #{game.game_url}".colorize(:light_green)
                 puts "~~~~~~~~~~~~~~~~~".colorize(:light_green)
                 puts "Enter yes to see more games or exit to exit.".colorize(:cyan)
+                menu
         else
             invalid
         end
