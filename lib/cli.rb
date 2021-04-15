@@ -1,5 +1,14 @@
 class CLI
     def start
+        puts "  
+     
+        _______ _______ _____   _______ ______ _______      _______ _______ _______ ______ _______ 
+        |     __|    ___|     |_|    ___|      |_     _|    |     __|_     _|   _   |   __ \_     _|
+        |__     |    ___|       |    ___|   ---| |   |      |__     | |   | |       |      < |   |  
+        |_______|_______|_______|_______|______| |___|      |_______| |___| |___|___|___|__| |___|  
+                                                                                                   
+
+    "
     puts "Welcome! What is your name?".colorize(:cyan)
     API.get_data
     input = user_input
@@ -39,7 +48,7 @@ class CLI
     def print_games
         
         Games.all.each.with_index(1) do |game, index|
-        puts "#{index}. #{game.title}".colorize(:light_green)
+             "#{index}. #{game.title}".colorize(:light_green)
         end
         select_game
         
@@ -61,17 +70,19 @@ class CLI
         if game == "exit"
             goodbye
         elsif game.class == Games
-                puts "~~~~~~~~~~~~~~~~~".colorize(:light_green)
-                puts "Title: #{game.title}".colorize(:light_green)
-                puts "Platform: #{game.platform}".colorize(:light_green)
-                puts "Publisher: #{game.publisher}".colorize(:light_green)
-                puts "Developer: #{game.developer}".colorize(:light_green)
-                puts "Description: #{game.short_description}".colorize(:light_green)
-                puts "Release Date: #{game.release_date}".colorize(:light_green)
-                puts "Thumbnail Link: #{game.thumbnail}".colorize(:light_green)
-                puts "Game URL: #{game.game_url}".colorize(:light_green)
-                puts "~~~~~~~~~~~~~~~~~".colorize(:light_green)
-                puts "Enter yes to see more games or exit to exit.".colorize(:cyan)
+            puts "~~~~~~~~~~~~~~~~~".colorize(:light_green)
+            puts "~~~~~~~~~~~~~~~~~".colorize(:light_green)
+            puts "Title: #{game.title}".colorize(:light_green)
+            puts "Platform: #{game.platform}".colorize(:light_green)
+            puts "Publisher: #{game.publisher}".colorize(:light_green)
+            puts "Developer: #{game.developer}".colorize(:light_green)
+            puts "Description: #{game.short_description}".colorize(:light_green)
+            puts "Release Date: #{game.release_date}".colorize(:light_green)
+            puts "Thumbnail: #{game.thumbnail}".colorize(:light_green)
+            puts "Game URL: #{game.game_url}".colorize(:light_green)
+            puts "~~~~~~~~~~~~~~~~~".colorize(:light_green)
+            puts "~~~~~~~~~~~~~~~~~".colorize(:light_green)
+            puts "Enter yes to see more games or exit to exit.".colorize(:cyan)
                 menu
         else
             invalid
