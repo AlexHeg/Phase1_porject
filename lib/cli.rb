@@ -8,7 +8,7 @@ class CLI
         |_______|_______|_______|_______|______| |___|      |_______| |___| |___|___|___|__| |___|  
                                                                                                    
 
-    "
+    ".colorize(:light_black)
     puts "Welcome! What is your name?".colorize(:cyan)
     API.get_data
     input = user_input
