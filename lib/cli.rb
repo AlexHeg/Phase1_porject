@@ -1,14 +1,12 @@
 class CLI
     def start
-        puts "  
-     
+        puts "
         _______ _______ _____   _______ ______ _______      _______ _______ _______ ______ _______ 
         |     __|    ___|     |_|    ___|      |_     _|    |     __|_     _|   _   |   __ \_     _|
         |__     |    ___|       |    ___|   ---| |   |      |__     | |   | |       |      < |   |  
         |_______|_______|_______|_______|______| |___|      |_______| |___| |___|___|___|__| |___|  
                                                                                                    
-
-    ".colorize(:light_black)
+        ".colorize(:light_black)
     puts "Welcome! What is your name?".colorize(:cyan)
     API.get_data
     input = user_input
@@ -38,6 +36,13 @@ class CLI
     end
 
     def goodbye
+        puts "
+        _______ _______ _______ _______      _______ ___ ___ _______ ______     
+        |     __|   _   |   |   |    ___|    |       |   |   |    ___|   __ \    
+        |    |  |       |       |    ___|    |   -   |   |   |    ___|      <    
+        |_______|___|___|__|_|__|_______|    |_______|\_____/|_______|___|__|    
+                                                                                
+        ".colorize(:light_black)
         puts "Thanks for stopping by! If you found a game have fun playing!".colorize(:cyan)
     end
 
@@ -48,7 +53,7 @@ class CLI
     def print_games
         
         Games.all.each.with_index(1) do |game, index|
-             "#{index}. #{game.title}".colorize(:light_green)
+        puts  "#{index}. #{game.title}".colorize(:light_green)
         end
         select_game
         
