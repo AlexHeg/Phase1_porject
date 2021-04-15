@@ -47,6 +47,13 @@ class CLI
     end
 
     def invalid
+        puts "
+        _______ ______ ______ _______ ______      _____  ______ _____  
+        |    ___|   __ \   __ \       |   __ \    |  |  ||      |  |  | 
+        |    ___|      <      <   -   |      <    |__    |  --  |__    |
+        |_______|___|__|___|__|_______|___|__|       |__||______|  |__| 
+                                                                        
+        ".colorize(:light_black)
         puts "Sorry thats not recognized... Type yes to see the list of games or exit to exit.".colorize(:cyan)
     end
 
