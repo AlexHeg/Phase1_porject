@@ -64,7 +64,7 @@ class CLI
         puts  "#{index}. #{game.title}".colorize(:light_green)
         end
         select_game
-        
+        #menu
     end
     
     def select_game
