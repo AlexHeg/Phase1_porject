@@ -55,7 +55,6 @@ class CLI
                                                                         
         ".colorize(:light_black)
         puts "Sorry thats not recognized... Type yes to see the list of games or exit to exit.".colorize(:cyan)
-        menu
     end
 
     def print_games
@@ -76,7 +75,7 @@ class CLI
             game = selection
         end
         game_detailes(game)
-        #menu
+        menu
     end
 
     def game_detailes(game)
@@ -96,7 +95,7 @@ class CLI
             puts "~~~~~~~~~~~~~~~~~".colorize(:light_green)
             puts "~~~~~~~~~~~~~~~~~".colorize(:light_green)
             puts "Enter yes to see more games or exit to exit.".colorize(:cyan)
-                menu
+                #menu
         else
             invalid
         end
