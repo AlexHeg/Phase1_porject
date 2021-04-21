@@ -69,16 +69,13 @@ class CLI
     def select_game
         puts "Please enter the name of the game you like to learn more about.".colorize(:cyan)
         selection = user_input
-        if game = Games.find_by_selection(selection)
-            game = Games.find_by_selection(selection)
-       
-        end
+        game = Games.find_by_selection(selection)
+        
         game_detailes(game)
         menu
     end
 
     def game_detailes(game)
-        
         if game.class == Games
             puts "~~~~~~~~~~~~~~~~~".colorize(:light_green)
             puts "~~~~~~~~~~~~~~~~~".colorize(:light_green)
