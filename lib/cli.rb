@@ -71,17 +71,15 @@ class CLI
         selection = user_input
         if game = Games.find_by_selection(selection)
             game = Games.find_by_selection(selection)
-        else 
-            game = selection
+       
         end
         game_detailes(game)
         menu
     end
 
     def game_detailes(game)
-        if game == "exit"
-            goodbye
-        elsif game.class == Games
+        
+        if game.class == Games
             puts "~~~~~~~~~~~~~~~~~".colorize(:light_green)
             puts "~~~~~~~~~~~~~~~~~".colorize(:light_green)
             puts "Title: #{game.title}".colorize(:light_green)
